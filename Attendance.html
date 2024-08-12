@@ -1,0 +1,320 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Galileo Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#111418]">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">TimeSheets</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Dashboard</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Timesheets</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Schedule</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">PTO</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Reports</a>
+            </div>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#1980e6] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Add</span>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://cdn.usegalileo.ai/stability/a32be53c-d11e-4aa1-8984-93c3607a64cf.png");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#111418] text-4xl font-black leading-tight tracking-[-0.033em]">Attendance</p>
+                <p class="text-[#637588] text-base font-normal leading-normal">View and manage employee clock-in and clock-out data</p>
+              </div>
+            </div>
+            <div class="pb-3">
+              <div class="flex border-b border-[#dce0e5] px-4 gap-8">
+                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-[#111418] text-[#111418] pb-[13px] pt-4" href="#">
+                  <p class="text-[#111418] text-sm font-bold leading-normal tracking-[0.015em]">Today</p>
+                </a>
+                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#637588] pb-[13px] pt-4" href="#">
+                  <p class="text-[#637588] text-sm font-bold leading-normal tracking-[0.015em]">Yesterday</p>
+                </a>
+                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#637588] pb-[13px] pt-4" href="#">
+                  <p class="text-[#637588] text-sm font-bold leading-normal tracking-[0.015em]">This Week</p>
+                </a>
+                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#637588] pb-[13px] pt-4" href="#">
+                  <p class="text-[#637588] text-sm font-bold leading-normal tracking-[0.015em]">Last Week</p>
+                </a>
+              </div>
+            </div>
+            <div class="px-4 py-3 @container">
+              <div class="flex overflow-hidden rounded-xl border border-[#dce0e5] bg-white">
+                <table class="flex-1">
+                  <thead>
+                    <tr class="bg-white">
+                      <th class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-120 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal">
+                        Employee
+                      </th>
+                      <th class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-240 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal">
+                        Clock-In
+                      </th>
+                      <th class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-360 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal">
+                        Clock-Out
+                      </th>
+                      <th class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-480 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal">
+                        Location
+                      </th>
+                      <th class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-600 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal">
+                        Hours Worked
+                      </th>
+                      <th class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-720 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal">Breaks</th>
+                      <th class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-840 px-4 py-3 text-left text-[#111418] w-60 text-sm font-medium leading-normal">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-t border-t-[#dce0e5]">
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        Brian McLaughlin
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-240 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">8:00am</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-360 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">5:00pm</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-480 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        San Francisco, CA
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-600 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">9 hours</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-720 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">1 hour</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-840 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">Approved</span>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dce0e5]">
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        Megan Smith
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-240 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">9:15am</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-360 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">4:45pm</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-480 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        New York, NY
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-600 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        7.5 hours
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-720 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        45 minutes
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-840 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">Pending</span>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dce0e5]">
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        Tina Patel
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-240 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">8:30am</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-360 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">5:30pm</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-480 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        Chicago, IL
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-600 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">9 hours</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-720 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">1 hour</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-840 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">Approved</span>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dce0e5]">
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        David Chang
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-240 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">9:00am</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-360 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">6:00pm</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-480 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        Los Angeles, CA
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-600 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">9 hours</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-720 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">1 hour</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-840 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">Pending</span>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dce0e5]">
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        Michelle Lee
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-240 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">8:45am</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-360 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">5:15pm</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-480 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        Austin, TX
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-600 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        8.5 hours
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-720 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">1 hour</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-840 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">Approved</span>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dce0e5]">
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        Carlos Rodriguez
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-240 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">8:15am</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-360 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">5:30pm</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-480 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        Miami, FL
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-600 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        9.25 hours
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-720 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        45 minutes
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-840 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">Pending</span>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dce0e5]">
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        Emily Davis
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-240 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">8:00am</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-360 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">5:00pm</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-480 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        Denver, CO
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-600 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">9 hours</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-720 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">1 hour</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-840 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">Approved</span>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dce0e5]">
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        Jasmine Nguyen
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-240 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">9:30am</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-360 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">6:00pm</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-480 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        Seattle, WA
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-600 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        8.5 hours
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-720 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        1.5 hours
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-840 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">Pending</span>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dce0e5]">
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        Robert Johnson
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-240 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">8:30am</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-360 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">5:30pm</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-480 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        Boston, MA
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-600 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">9 hours</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-720 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">1 hour</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-840 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">Approved</span>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dce0e5]">
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal">
+                        Alicia Garcia
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-240 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">8:45am</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-360 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">5:15pm</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-480 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        Phoenix, AZ
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-600 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">
+                        8.5 hours
+                      </td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-720 h-[72px] px-4 py-2 w-[400px] text-[#637588] text-sm font-normal leading-normal">1 hour</td>
+                      <td class="table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-840 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#f0f2f4] text-[#111418] text-sm font-medium leading-normal w-full"
+                        >
+                          <span class="truncate">Pending</span>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <style>
+                          @container(max-width:120px){.table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-120{display: none;}}
+                @container(max-width:240px){.table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-240{display: none;}}
+                @container(max-width:360px){.table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-360{display: none;}}
+                @container(max-width:480px){.table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-480{display: none;}}
+                @container(max-width:600px){.table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-600{display: none;}}
+                @container(max-width:720px){.table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-720{display: none;}}
+                @container(max-width:840px){.table-84a8db8d-d0e8-4a1e-b5f7-770a3fc8cc55-column-840{display: none;}}
+              </style>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

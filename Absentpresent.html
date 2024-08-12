@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 600px;
+            padding: 20px;
+        }
+        .sidebar {
+            width: 200px;
+            float: left;
+        }
+        .content {
+            margin-left: 220px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #eeeeee;
+            border-radius: 5px;
+        }
+        .sidebar ul li:hover {
+            background-color: #dddddd;
+        }
+        .profile, .help {
+            margin-top: 20px;
+        }
+        .profile img, .help img {
+            width: 24px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .attendance-header {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .attendance-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .attendance-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .attendance-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .attendance-details {
+            font-size: 16px;
+        }
+        .attendance-status {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li>Dashboard</li>
+                <li>Time</li>
+                <li>Shifts</li>
+                <li>Leave</li>
+                <li>Reports</li>
+            </ul>
+            <div class="profile">
+                <img src="profile-icon.png" alt="Profile Icon">
+                Profile
+            </div>
+            <div class="help">
+                <img src="help-icon.png" alt="Help Icon">
+                Help
+            </div>
+        </div>
+        <div class="content">
+            <div class="attendance-header">Attendance</div>
+            <ul class="attendance-list">
+                <li class="attendance-item">
+                    <img src="person1.jpg" alt="Person 1">
+                    <div class="attendance-details">
+                        <div class="attendance-status">Absent</div>
+                        <div>1:00 PM - 8:00 PM</div>
+                    </div>
+                </li>
+                <li class="attendance-item">
+                    <img src="person2.jpg" alt="Person 2">
+                    <div class="attendance-details">
+                        <div class="attendance-status">Tardy</div>
+                        <div>9:00 AM - 4:00 PM</div>
+                    </div>
+                </li>
+                <li class="attendance-header">Yesterday</li>
+                <li class="attendance-item">
+                    <img src="person3.jpg" alt="Person 3">
+                    <div class="attendance-details">
+                        <div class="attendance-status">Absent</div>
+                        <div>1:00 PM - 8:00 PM</div>
+                    </div>
+                </li>
+                <li class="attendance-item">
+                    <img src="person4.jpg" alt="Person 4">
+                    <div class="attendance-details">
+                        <div class="attendance-status">Tardy</div>
+                        <div>9:00 AM - 4:00 PM</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
