@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracking - Admin</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: auto; }
+        .timesheet { margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 10px; border: 1px solid #ddd; }
+        th { background-color: #f4f4f4; }
+        .btn { padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+        .btn-danger { background-color: #dc3545; }
+        .btn-success { background-color: #28a745; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Timesheet Management</h1>
+        <div class="timesheet">
+            <h2>All Timesheets</h2>
+            <table id="adminTimesheetTable">
+                <thead>
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Project/Task ID</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Duration (hours)</th>
+                        <th>Overtime (hours)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Timesheet records will be added here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Sample data to simulate backend data fetching
+        const timesheets = [
+            { employeeId: 'E001', projectId: 'P001', startTime: '2024-07-31T08:00', endTime: '2024-07-31T17:00', duration: 9, overtime: 1},
+            { employeeId: 'E002', projectId: 'P002', startTime: '2024-07-31T09:00', endTime: '2024-07-31T18:00', duration: 9, overtime: 1 }
+        ];
+
+        function loadTimesheets() {
+            const table = document.getElementById('adminTimesheetTable').getElementsByTagName('tbody')[0];
+            table.innerHTML = ''; // Clear existing rows
+
+            timesheets.forEach((sheet, index) => {
+                const newRow = table.insertRow();
+
+                newRow.insertCell(0).textContent = sheet.employeeId;
+                newRow.insertCell(1).textContent = sheet.projectId;
+                newRow.insertCell(2).textContent = new Date(sheet.startTime).toLocaleString();
+                newRow.insertCell(3).textContent = new Date(sheet.endTime).toLocaleString();
+                newRow.insertCell(4).textContent = sheet.duration.toFixed(2);
+                newRow.insertCell(5).textContent = sheet.overtime.toFixed(2);
+                newRow.insertCell(6).textContent = sheet.status;
+                const actionsCell = newRow.insertCell(7);
+
+                const approveButton = document.createElement('button');
+                approveButton.className = 'btn btn-success';
+                approveButton.textContent = 'Approve';
+                approveButton.onclick = () => updateStatus(index, 'Approved');
+                actionsCell.appendChild(approveButton);
+
+                const rejectButton = document.createElement('button');
+                rejectButton.className = 'btn btn-danger';
+                rejectButton.textContent = 'Reject';
+                rejectButton.onclick = () => updateStatus(index, 'Rejected');
+                actionsCell.appendChild(rejectButton);
+            });
+        }
+
+        function updateStatus(index, status) {
+            timesheets[index].status = status;
+            loadTimesheets();
+        }
+
+        // Load timesheets on page load
+        window.onload = loadTimesheets;
+    </script>
+</body>
+</html>

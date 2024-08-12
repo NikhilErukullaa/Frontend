@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracking - User</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: auto; }
+        .timesheet { margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 10px; border: 1px solid #ddd; }
+        th { background-color: #f4f4f4; }
+        .btn { padding: 10px 20px; background-color: #28a745; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Time Tracking</h1>
+        <form id="timeForm">
+            <div>
+                <label for="employeeId">Employee ID:</label>
+                <input type="text" id="employeeId" name="employeeId" required>
+            </div>
+            <div>
+                <label for="projectId">Project/Task ID:</label>
+                <input type="text" id="projectId" name="projectId" required>
+            </div>
+            <div>
+                <label for="startTime">Start Time:</label>
+                <input type="datetime-local" id="startTime" name="startTime" required>
+            </div>
+            <div>
+                <label for="endTime">End Time:</label>
+                <input type="datetime-local" id="endTime" name="endTime" required>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <div class="timesheet">
+            <h2>Timesheet</h2>
+            <table id="timesheetTable">
+                <thead>
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Project/Task ID</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Duration (hours)</th>
+                        <th>Overtime (hours)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Timesheet records will be added here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('timeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const employeeId = document.getElementById('employeeId').value;
+            const projectId = document.getElementById('projectId').value;
+            const startTime = new Date(document.getElementById('startTime').value);
+            const endTime = new Date(document.getElementById('endTime').value);
+            
+            const duration = (endTime - startTime) / 3600000; // in hours
+            const overtime = Math.max(0, duration - 8); // assuming 8 hours as regular time
+
+            const table = document.getElementById('timesheetTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+
+            newRow.insertCell(0).textContent = employeeId;
+            newRow.insertCell(1).textContent = projectId;
+            newRow.insertCell(2).textContent = startTime.toLocaleString();
+            newRow.insertCell(3).textContent = endTime.toLocaleString();
+            newRow.insertCell(4).textContent = duration.toFixed(2);
+            newRow.insertCell(5).textContent = overtime.toFixed(2);
+        });
+    </script>
+</body>
+</html>
